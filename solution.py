@@ -13,7 +13,7 @@ def solution(p: float, x: np.array) -> tuple:
     left_edge_chi_squared = chi2.ppf(alpha / 2, 2 * len(x)) 
     right_edge_chi_squared = chi2.ppf(1 - alpha / 2, 2 * len(x))
     
-    left_edge_sigma = np.sqrt(stat / (31 * right_edge_chi_squared))
-    right_edge_sigma = np.sqrt(stat / (31 * left_edge_chi_squared))
+    left_edge_sigma = np.sqrt(stat / (50 * right_edge_chi_squared))
+    right_edge_sigma = np.sqrt(stat / (50 * left_edge_chi_squared))
     
     return (left_edge_sigma, right_edge_sigma)
